@@ -22,10 +22,16 @@ Created by : mutationthemes
 12.Mediaqueries
 
 
+
+
 /*Preloader*/
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
  .loader {
-     background: #ffffff;
+     /* background: #ffffff;
      bottom: 0;
      height: 100%;
      left: 0;
@@ -33,10 +39,17 @@ Created by : mutationthemes
      right: 0;
      top: 0;
      width: 100%;
-     z-index: 10000;
+     z-index: 10000; */
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     width: 100%;
+     height: 100%;
+     z-index: 9999;
+     background: #fff;
 }
  .loader-inner {
-     left: 0;
+     /* left: 0;
      position: absolute;
      top: 50%;
      width: 100%;
@@ -45,8 +58,41 @@ Created by : mutationthemes
      -webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
      -ms-transform: translateY(-50%);
-     -o-transform: translateY(-50%);
-}
+     -o-transform: translateY(-50%); */
+     margin: -20px auto 0;
+     top: 50%;
+     left: 0;
+     right: 0;
+     width: 50px;
+     height: 50px;
+     position: absolute;
+     text-align: center;
+     -webkit-animation: rotate 2s infinite linear;
+    animation: rotate 2s infinite linear;
+
+    }
+
+    .dot1, .dot2 {
+        width: 60%;
+        height: 60%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        background: url(../assets/img/heart_img.png) no-repeat;
+        background-size: 100%;
+        -webkit-animation: bounce 2s infinite ease-in-out;
+        animation: bounce 2s infinite ease-in-out;
+    }
+
+    .dot2 {
+        top: auto;
+        bottom: 0;
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s;
+    }
+
+   
+    
  .loading-spinner {
      width: 4.5rem;
      height: 4.5rem;
@@ -121,6 +167,7 @@ Created by : mutationthemes
 
 .header {
     position: relative;
+    display: none !important;
 }
 .bg-image {
     top: 0;
@@ -128,7 +175,7 @@ Created by : mutationthemes
     width: 100%;
     height: 100%;
     z-index: 0;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
 }
 .min-vh-80 {
@@ -172,6 +219,11 @@ Created by : mutationthemes
     text-transform: uppercase;
     font-size: 0.8125rem;
     letter-spacing: 0.055rem;
+}
+
+.std-img{
+    width: 824px;
+    height: initial
 }
 
 /* End hero Section*/

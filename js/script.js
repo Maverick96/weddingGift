@@ -7,8 +7,8 @@
 
         // Site loader 
 
-        $(".loader-inner").fadeOut();
-        $(".loader").delay(200).fadeOut("slow");
+        // $(".loader-inner").fadeOut();
+        $(".loader").delay(300).fadeOut("slow");
 
 
         // Set the date we're counting down to
@@ -49,22 +49,22 @@
 
     // Site navigation setup
 
-    // var header = $('.header'),
-    //     pos = header.offset();
+    var header = $('.header'),
+        pos = header.offset();
 
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > pos.top + 50 && header.hasClass('default')) {
-    //         header.fadeOut('fast', function () {
-    //             $(this).removeClass('default').addClass('switched-header').fadeIn(200);
-    //             $('.scroll-to-top').addClass('active');
-    //         });
-    //     } else if ($(this).scrollTop() <= pos.top + 50 && header.hasClass('switched-header')) {
-    //         header.fadeOut('fast', function () {
-    //             $(this).removeClass('switched-header').addClass('default').fadeIn(100);
-    //             $('.scroll-to-top').removeClass('active');
-    //         });
-    //     }
-    // });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > pos.top + 50 && header.hasClass('default')) {
+            header.fadeOut('fast', function () {
+                $(this).removeClass('default').addClass('switched-header').fadeIn(200);
+                $('.scroll-to-top').addClass('active');
+            });
+        } else if ($(this).scrollTop() <= pos.top + 50 && header.hasClass('switched-header')) {
+            header.fadeOut('fast', function () {
+                $(this).removeClass('switched-header').addClass('default').fadeIn(100);
+                $('.scroll-to-top').removeClass('active');
+            });
+        }
+    });
 
 
     // Scroll to
@@ -126,15 +126,15 @@
 
     // Instagram feed setup
 
-    var instaFeed = new Instafeed({
-        get: 'user',
-        userId: '13339175373',
-        accessToken: '13339175373.95cbc68.b63a06b452874b6e8384eebc29a005ce',
-        limit: 5,
-        resolution: 'standard_resolution',
-        template: '<li><a class="hover-effect rounded-circle" target="_blank" href="{{link}}"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-heart hover-effect-icon-inner"></span></span></span></span><img class=" mw-100" src="{{image}}" /></a></li>'
-    });
-    instaFeed.run();
+    // var instaFeed = new Instafeed({
+    //     get: 'user',
+    //     userId: '13339175373',
+    //     accessToken: '13339175373.95cbc68.b63a06b452874b6e8384eebc29a005ce',
+    //     limit: 5,
+    //     resolution: 'standard_resolution',
+    //     template: '<li><a class="hover-effect rounded-circle" target="_blank" href="{{link}}"><span class="hover-effect-container"><span class="hover-effect-icon hover-effect-icon-small"><span class="fa fa-heart hover-effect-icon-inner"></span></span></span></span><img class=" mw-100" src="{{image}}" /></a></li>'
+    // });
+    // instaFeed.run();
 
 
 
