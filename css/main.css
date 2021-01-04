@@ -775,6 +775,46 @@ ul.instafeed-list li {
     padding-left:0.75rem;
 } 
 }
+
+.counter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.count-block{
+    width: 24%;
+    display: inline-block;
+    background-color: #e35d5d;
+    color: #fff;
+    font-family: roboto,Helvetica,sans-serif;
+    font-size: 40px;
+    line-height: 1.1em;
+    margin-right: 1.333333%;
+    text-align: center;
+    padding: 20px;
+}
+
+.count-block .count-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.counter-end{
+    font-size: 32px;
+    background-color: #e35d5d;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.bg-red{
+    background-color: #e35d5d
+}
+
 @media (max-width: 767.98px) {
 }
 @media(min-width:768px){
@@ -801,4 +841,37 @@ h5, .h5 {
 }
 @media (min-width: 1200px) {
 }
+
+
+@media only screen and (max-width: 420px){
+.count-block {
+    font-size: 21px;
+    padding: 20px 10px;
+}
+}
+
+@media only screen and (max-width: 991px){
+.count-block {
+    font-size: 30px;
+    padding: 20px 10px;
+}
+}
+
+@media only screen and (max-width: 360px){
+.count-block .count-label {
+    font-size: 10px;
+}
+}
+
+@media only screen and (max-width: 420px){
+.count-block .count-label {
+    font-size: 11px;
+}
+}
+@media only screen and (max-width: 991px){
+.count-block .count-label {
+    font-size: 11px;
+}
+}
 /*End mediaqueries*/
+
